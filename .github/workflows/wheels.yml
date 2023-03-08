@@ -2,6 +2,7 @@
 
 name: Wheels
 on:
+  push:
   workflow_dispatch:
     inputs:
       cibw_build:
