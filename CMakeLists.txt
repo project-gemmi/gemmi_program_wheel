@@ -11,7 +11,7 @@ include(FetchContent)
 FetchContent_Declare(
   gemmi
   GIT_REPOSITORY https://github.com/project-gemmi/gemmi.git
-  GIT_TAG        7639b1f421207db15d76d1d5f7a813990a634633 # v0.6.1
+  GIT_TAG        3f7b8d74971a0ee009347ceb5ae6780023861e62 # v0.6.2
 )
 
 # We don't want to install all gemmi files.
