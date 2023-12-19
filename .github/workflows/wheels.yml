@@ -21,22 +21,20 @@ jobs:
         include:
           - os: ubuntu-22.04
             arch: "x86_64"
-          - os: windows-2019
+          - os: windows-2022
             arch: "AMD64"
           - os: macos-11
             arch: "x86_64 arm64"
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Build wheels
-      uses: pypa/cibuildwheel@v2.15.0
+      uses: pypa/cibuildwheel@v2.16.2
       env:
         CIBW_BUILD: ${{ github.event.inputs.cibw_build }}
         CIBW_SKIP: ${{ github.event.inputs.cibw_skip }}
         CIBW_ARCHS: "${{ matrix.arch }}"
-        # increase pip debugging output
-        CIBW_BUILD_VERBOSITY: 1
 
     - run: ls -lh wheelhouse
       shell: bash
