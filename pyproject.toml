@@ -29,3 +29,6 @@ BUILD_SHARED_LIBS = "OFF"
 [tool.cibuildwheel]
 build-verbosity = 1
 test-command = "gemmi --version --verbose"
+skip = "*musllinux*"
+# this setting is in .github/workflows/wheels.yml, here it's for local testing
+build = "cp312-*"

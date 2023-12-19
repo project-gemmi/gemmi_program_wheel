@@ -7,10 +7,7 @@ on:
     inputs:
       cibw_build:
         description: 'CIBW_BUILD'
-        default: '*'
-      cibw_skip:
-        description: 'CIBW_SKIP'
-        default: ''
+        default: 'cp312-*'
 
 jobs:
   build_wheels:
@@ -33,7 +30,6 @@ jobs:
       uses: pypa/cibuildwheel@v2.16.2
       env:
         CIBW_BUILD: ${{ github.event.inputs.cibw_build }}
-        CIBW_SKIP: ${{ github.event.inputs.cibw_skip }}
         CIBW_ARCHS: "${{ matrix.arch }}"
 
     - run: ls -lh wheelhouse
