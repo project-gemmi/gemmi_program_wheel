@@ -1,10 +1,10 @@
 [build-system]
-requires = ["scikit-build-core==0.7.0"]
+requires = ["scikit-build-core~=0.8.0"]
 build-backend = "scikit_build_core.build"
 
 [project]
 name = "gemmi-program"
-version = "0.6.4"
+version = "0.6.5"
 requires-python = ">=3.8"
 description="gemmi (program executable only)"
 readme = "README.md"
@@ -25,6 +25,8 @@ cmake.build-type = "Release"
 #logging.level = "DEBUG"
 [tool.scikit-build.cmake.define]
 BUILD_SHARED_LIBS = "OFF"
+FETCH_ZLIB_NG = "ON"
+INSTALL_DEV_FILES = "OFF"
 
 [tool.cibuildwheel]
 build-verbosity = 1

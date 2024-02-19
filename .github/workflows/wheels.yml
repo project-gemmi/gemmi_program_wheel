@@ -20,14 +20,16 @@ jobs:
             arch: "x86_64"
           - os: windows-2022
             arch: "AMD64"
-          - os: macos-11
-            arch: "x86_64 arm64"
+          - os: macos-14
+            arch: "x86_64"
+          - os: macos-15
+            arch: "arm64"
 
     steps:
     - uses: actions/checkout@v4
 
     - name: Build wheels
-      uses: pypa/cibuildwheel@v2.16.2
+      uses: pypa/cibuildwheel@v2.16.5
       env:
         CIBW_BUILD: ${{ github.event.inputs.cibw_build }}
         CIBW_ARCHS: "${{ matrix.arch }}"
@@ -35,7 +37,7 @@ jobs:
     - run: ls -lh wheelhouse
       shell: bash
 
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
-        name: program_wheels
+        name: program_wheel-${{ matrix.os }}
         path: wheelhouse/*.whl
