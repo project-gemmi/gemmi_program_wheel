@@ -16,9 +16,9 @@ jobs:
             arch: "x86_64"
           - os: windows-2022
             arch: "AMD64"
-          - os: macos-14
+          - os: macos-13
             arch: "x86_64"
-          - os: macos-15
+          - os: macos-14
             arch: "arm64"
 
     steps:
