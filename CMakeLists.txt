@@ -7,6 +7,9 @@ set(target gemmi_prog)
 # and use this options when building:
 set(GEMMI_VERSION_INFO "from wheel")
 
+# avoid building python module
+unset(Python_EXECUTABLE CACHE)
+
 include(FetchContent)
 FetchContent_Declare(
   gemmi

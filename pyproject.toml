@@ -26,7 +26,6 @@ cmake.build-type = "Release"
 [tool.scikit-build.cmake.define]
 BUILD_SHARED_LIBS = "OFF"
 FETCH_ZLIB_NG = "ON"
-INSTALL_DEV_FILES = "OFF"
 
 [tool.cibuildwheel]
 build-verbosity = 1
