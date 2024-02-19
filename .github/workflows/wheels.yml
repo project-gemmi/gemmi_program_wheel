@@ -4,10 +4,6 @@ name: Wheels
 on:
   push:
   workflow_dispatch:
-    inputs:
-      cibw_build:
-        description: 'CIBW_BUILD'
-        default: 'cp312-*'
 
 jobs:
   build_wheels:
@@ -31,7 +27,6 @@ jobs:
     - name: Build wheels
       uses: pypa/cibuildwheel@v2.16.5
       env:
-        CIBW_BUILD: ${{ github.event.inputs.cibw_build }}
         CIBW_ARCHS: "${{ matrix.arch }}"
 
     - run: ls -lh wheelhouse
