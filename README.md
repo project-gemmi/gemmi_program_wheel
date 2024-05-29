@@ -10,9 +10,11 @@ because, unlike the module, it does not depend on Python version.
 
 ### notes for myself -- how to make wheels after gemmi release
 
-* update `GIT_TAG` in CMakeLists.txt and `version` in pyproject.toml
-* (optionally) update version of cibuildwheel in .github/workflows/wheels.yml
-  and scikit-build-core in pyproject.toml
+* update:
+  * `GIT_TAG` in CMakeLists.txt
+  * `version` in pyproject.toml
+  * scikit-build-core version in pyproject.toml (optional)
+  * cibuildwheel version in .github/workflows/wheels.yml (optional)
 * test locally with `pip wheel .`
 * make source distribution of this repo: `python -m build --sdist`
 * git push changes to build wheels in [GitHub Actions][1]
