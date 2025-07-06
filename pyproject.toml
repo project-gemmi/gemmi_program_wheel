@@ -1,10 +1,10 @@
 [build-system]
-requires = ["scikit-build-core~=0.11.1"]
+requires = ["scikit-build-core"]
 build-backend = "scikit_build_core.build"
 
 [project]
 name = "gemmi-program"
-version = "0.7.1"
+version = "0.7.3"
 requires-python = ">=3.8"
 description="gemmi (program executable only)"
 readme = "README.md"
