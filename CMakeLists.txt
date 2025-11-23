@@ -14,7 +14,7 @@ include(FetchContent)
 FetchContent_Declare(
   gemmi
   GIT_REPOSITORY https://github.com/project-gemmi/gemmi.git
-  GIT_TAG        v0.7.3
+  GIT_TAG        v0.7.4
   #GIT_TAG        master
   GIT_SHALLOW    TRUE
 )

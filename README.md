@@ -15,10 +15,10 @@ because, unlike the module, it does not depend on Python version.
   * `version` in pyproject.toml
   * scikit-build-core version in pyproject.toml (optional)
   * cibuildwheel version in .github/workflows/wheels.yml (optional)
+  * commit and push
+* wait and download[1] wheels
 * test locally with `pip wheel .`
 * make source distribution of this repo: `python -m build --sdist`
-* git push changes to build wheels in [GitHub Actions][1]
-* download the wheels, check them, upload sdist and wheels to PyPI:
 
       twine upload dist/gemmi_program-$VERSION.tar.gz
       twine upload wheels/gemmi_program-$VERSION-*.whl
